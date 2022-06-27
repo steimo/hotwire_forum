@@ -1,4 +1,4 @@
-<div class="container mx-auto"
+<div class=""
    data-controller="slideover"
    data-slideover-open-value="false"
    data-slideover-invisible-class="-translate-x-full,opacity-0"
@@ -37,7 +37,7 @@
             <div class="mt-auto">
               <div class="pt-6">
                 <% if user_signed_in? %>
-                  <%= link_to "Edit user", edit_user_registration_path, class: "block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" %>
+                  <%= link_to Current.user.username, edit_user_registration_path, class: "block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" %>
                   <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl" %>
                 <% else %>
                   <%= link_to "Sign up", new_user_registration_path, class: "block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" %>
@@ -54,7 +54,7 @@
     </div>
   </div>
   <!-- end sidebar/slideover -->
-  <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
+  <nav class=" w-screen relative px-4 py-6 flex justify-between items-center" id="navbar">
     <%= link_to "Hotwire Forum", root_path, class: "text-3xl text-blue-600 font-bold leading-none" %>
     <div class="lg:hidden">
       <button class="navbar-burger flex items-center text-blue-600 p-3" data-action="click->slideover#toggle click@window->slideover#hide">

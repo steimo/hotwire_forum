@@ -16,6 +16,8 @@
 
 body {
   font-family: -apple-system, sans-serif;
-  /* background: #eee; */
 }
 
+#navbar {
+  background: #eee;
+}
