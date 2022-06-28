@@ -38,7 +38,9 @@
               <div class="pt-6">
                 <% if user_signed_in? %>
                   <%= link_to Current.user.username, edit_user_registration_path, class: "block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" %>
-                  <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl" %>
+                  <div class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl">
+                  <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+                  </div>
                 <% else %>
                   <%= link_to "Sign up", new_user_registration_path, class: "block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" %>
                   <%= link_to "Login", new_user_session_path, class: "block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl" %>
@@ -81,7 +83,9 @@
     </ul>
     <% if user_signed_in? %>
       <%= link_to Current.user.username, edit_user_registration_path, class: "hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" %>
-      <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" %>
+      <div class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200">
+                  <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+      </div>
     <% else %>
       <%= link_to "Sign up", new_user_registration_path, class: "hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" %>
       <%= link_to "Login", new_user_session_path, class: "hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" %>
