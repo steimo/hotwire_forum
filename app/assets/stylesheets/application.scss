@@ -1,0 +1,14 @@
+@import "actiontext"
+
+body {
+  font-family: -apple-system, sans-serif;
+}
+
+#navbar {
+  background: #eee;
+}
+
+turbo-frame {
+  display: block;
+  border: 1px solid blue;
+}
