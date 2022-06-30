@@ -37,3 +37,12 @@ turbo-frame {
   padding: 0 !important;
   max-width: 100% !important;
 }
+
+.trix-content ol li {
+  list-style: decimal;
+  margin-left: 1em;
+}
+.trix-content ul li {
+  list-style: disc;
+  margin-left: 1em;
+}
