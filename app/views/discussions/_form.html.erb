@@ -1,4 +1,4 @@
-<div class="flex flex-col justify-center items-center p-4">
+<div class="flex flex-col justify-center items-center">
   <h1 class="mb-3 text-xl font-semibold">
     <% if action_name == "new" %>
       <%= "New" %>
@@ -9,7 +9,7 @@
     <% end %>
     discussion
   </h1>
-  <div class="m-4">
+  <div class="">
     <%= form_with(model: discussion) do |form| %>
       <% if discussion.errors.any? %>
         <div id="error_explanation">
@@ -23,21 +23,21 @@
       <% end %>
       <div class="mb-3">
         <%= form.label :name, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400" %>
-        <%= form.text_field :name, :size=>"40", placeholder: "How do I...?", class: "w-full sm:w-auto md:w-full flex items-center border-2 mb-8 py-2 px-3 rounded-2xl" %>
+        <%= form.text_field :name, placeholder: "How do I...?", class: "w-1/2 sm:w-full md:w-full lg:w-32 xl:w-3/4 flex items-center border-2 rounded-2xl" %>
       </div>
-      <div class="mb-3">
+      <div class="mb-3 px-4">
         <%= form.label :pinned, class: "form-check-label inline-block text-gray-800" %>
         <%= form.check_box :pinned, class: "form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" %>
       </div>
-      <div class="mb-6">
+      <div class="mb-6 px-4">
         <%= form.label :closed, class: "form-check-label inline-block text-gray-800" %>
         <%= form.check_box :closed, class: "form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" %>
       </div>
 
        <% if discussion.new_record? %>
          <%= form.fields_for :posts do |p| %>
-         <div class="mb-3">
-           <%= p.rich_text_area :body, placeholder: "Kickoff the discussion" %>
+         <div class="mb-6 px-4">
+           <%= p.rich_text_area :body, placeholder: "Kickoff the discussion", class: "" %>
          </div>
        <% end %>
        <% end %>

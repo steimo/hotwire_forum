@@ -193,8 +193,6 @@ GEM
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     rubyzip (2.3.2)
-    sass-rails (6.0.0)
-      sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -265,7 +263,7 @@ DEPENDENCIES
   rails (~> 7.0.3)
   rdoc
   redis (~> 4.0)
-  sass-rails (>= 6)
+  sassc-rails
   selenium-webdriver
   stimulus-rails
   tailwindcss-rails
