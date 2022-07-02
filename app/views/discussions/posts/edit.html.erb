@@ -1,0 +1,14 @@
+<h1>Edit post</h1>
+<%= turbo_frame_tag dom_id(@post) do %>
+  <div class="flex flex-col justify-center items-center">
+    <div class="m-4 mt-4 w-9/12 sm:w-auto md:w-auto lg:w-3/4 xl:w-3/4 rounded-xl overflow-hidden shadow-lg border">
+      <div class="p-4">
+        <%= render "discussions/posts/header", post: @post %>
+        <div class="mt-4">
+          <%= render "form", post: @post %>
+          <%= link_to 'Back', discussion_post_path(@post.discussion, @post) %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
