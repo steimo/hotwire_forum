@@ -2,7 +2,9 @@
 
 <%= render "discussions/header", discussion: @discussion %>
 
+<div id="posts">
 <%= render partial: "discussions/posts/post", collection: @posts %>
+</div>
 
 <div id="<%= dom_id(@new_post) %>" class="flex items-center justify-center">
   <%= render "discussions/posts/form", post: @new_post %>
