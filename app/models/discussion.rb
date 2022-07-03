@@ -9,6 +9,7 @@ class Discussion < ApplicationRecord
 
   validates :name, presence: true
 
+  broadcasts_to :category, inserts_by: :prepend
   after_create_commit -> { broadcast_prepend_to 'discussions' }
   after_update_commit -> { broadcast_replace_to 'discussions' }
   after_destroy_commit -> { broadcast_remove_to 'discussions' }

@@ -1,13 +1,13 @@
-<%= turbo_stream_from 'discussions' %>
+<% if @category.present? %>
+  <%= turbo_stream_from @category %>
+<% else %>
+  <%= turbo_stream_from 'discussions' %>
+<% end %>
 <div class="w-full mt-4 flex justify-around items-center">
   <h1 class="text-3xl font-bold">Discussions</h1>
   <%= link_to "New discussion", new_discussion_path, class: "bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" %>
 </div>
-
-
-
 <div class="flex justify-around mt-4 divide-x-2">
-
   <div class="w-auto">
     <%= turbo_stream_from 'categories' %>
     <h5 class="font-semibold px-2">Categories</h5>
@@ -16,15 +16,15 @@
     </div>
   </div>
 
-
-
   <div class="w-11/12">
+    <% if @category %>
+      <h4 class="ml-2 text-gray-500">Viewing discussions in <%= @category.name %></h4>
+    <% end %>
     <div class="flex-col">
       <div id="discussions">
-        <%= render @discussions %>
+        <%= render partial: "discussions/discussion", collection: @discussions %>
       </div>
     </div>
   </div>
-
 
 </div>
