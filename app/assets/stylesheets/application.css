@@ -46,3 +46,7 @@ turbo-frame {
   list-style: disc;
   margin-left: 1em;
 }
+
+trix-toolbar .trix-button-row {
+  flex-wrap: wrap;
+}
