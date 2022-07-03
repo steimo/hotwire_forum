@@ -1,14 +1,19 @@
 <%= turbo_frame_tag "#{dom_id(post)}_form", target: "_top", class: "" do %>
+  <% if post.discussion.closed? && post.new_record? %>
+    <div role="alert" class="font-semibold text-l text-red-400">
+      This discussion is currently locked and new posts cannot be posted.
+    </div>
+  <% else %>
   <%= form_with(model: [post.discussion, post]) do |form| %>
     <% if post.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(post.errors.count, "error") %> prevented this post from being saved:</h2>
-          <ul>
-            <% post.errors.each do |error| %>
-              <li><%= error.full_message %></li>
-            <% end %>
-          </ul>
-        </div>
+      <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> prevented this post from being saved:</h2>
+        <ul>
+          <% post.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
     <% end %>
     <div class="mb-3">
       <%= form.label :body, class: "form-label hidden" %>
@@ -18,4 +23,5 @@
       <%= form.submit class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl", style: "cursor:pointer" %>
     </div>
   <% end %>
+<% end %>
 <% end %>
