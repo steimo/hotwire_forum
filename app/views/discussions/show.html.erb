@@ -2,10 +2,16 @@
 
 <%= render "discussions/header", discussion: @discussion %>
 
-<div id="posts">
+<div>
 <%= render partial: "discussions/posts/post", collection: @posts %>
+<% if @pagy.page == @pagy.last %>
+<div id="posts"></div>
+<% end %>
 </div>
 
+      <div class="flex justify-center my-2">
+      <%== pagy_nav(@pagy) %>
+      </div>
 <div id="<%= dom_id(@new_post) %>" class="flex items-center justify-center">
-  <%= render "discussions/posts/form", post: @new_post %>
+  <%= render "discussions/posts/form", post: @new_post, redirect: @pagy.page != @pagy.last %>
 </div>
