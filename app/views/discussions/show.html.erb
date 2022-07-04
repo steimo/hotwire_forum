@@ -9,9 +9,12 @@
 <div class="flex justify-center my-2">
   <%== pagy_nav(@pagy) %>
 </div>
+<div class="my-4 flex justify-center">
 <%= turbo_frame_tag "discussion_notification_status" do %>
   <%= render("discussions/notifications/status", discussion: @discussion, user: Current.user) %>
 <% end %>
+</div>
+
 <div id="<%= dom_id(@new_post) %>" class="flex items-center justify-center">
   <%= render "discussions/posts/form", post: @new_post, redirect: @pagy.page != @pagy.last %>
 </div>
