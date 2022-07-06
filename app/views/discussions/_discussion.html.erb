@@ -1,6 +1,6 @@
 <div id="<%= dom_id(discussion) %>" class="ml-2 mb-4">
   <h2 class="text-xl">
-    <%= link_to discussion.name, discussion %>
+    <%= link_to discussion.name, discussion, class: "text-blue-600" %>
   </h2>
   Pinned: <%= discussion.pinned %> | Closed: <%= discussion.closed %> <br>
   Posted in: <%= discussion.category_name %> | Posts <%= discussion.posts_count %>

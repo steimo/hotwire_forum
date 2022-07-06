@@ -1,6 +1,6 @@
 <div id="<%= dom_id category %>">
-  <div class="flex justify-between mt-2">
-    <%= link_to category.name, category_discussions_path(category) %>
+  <div class="flex justify-around mt-5">
+    <%= link_to category.name, category_discussions_path(category), class: "text-blue-600" %>
     <% if category.discussions_count&.positive? %>
       <span class="px-2 bg-teal-400 rounded-3xl">
         <%= category.discussions_count %>
