@@ -49,7 +49,7 @@ module Discussions
 
     private
 
-    def send_post_notification(post)
+    def send_post_notification!(post)
       post_subscribers = post.discussion.subscribed_users - [post.user]
       NewPostNotification.with(post: post).deliver_later(post_subscribers)
     end
