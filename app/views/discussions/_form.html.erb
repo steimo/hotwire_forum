@@ -1,6 +1,4 @@
-<div class="flex flex-col justify-center items-center">
-  <h1 class="mb-3 text-xl font-semibold">
-    <% if action_name == "new" %>
+"new" %>
       <%= "New" %>
     <% elsif %>
       <%= "Edit" %>
@@ -41,7 +39,7 @@
     <% if discussion.new_record? %>
       <%= form.fields_for :posts do |p| %>
         <div class="mb-6 m-4">
-          <%= p.rich_text_area :body, placeholder: "Kickoff the discussion", class: "" %>
+          <%= p.rich_text_area :body, placeholder: "Kickoff the discussion" %>
         </div>
       <% end %>
     <% end %>
