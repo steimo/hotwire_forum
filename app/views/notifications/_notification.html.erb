@@ -1,4 +1,11 @@
 <div id="<%= dom_id(notification) %>" class="flex my-2">
   <% noticed_notification = notification.to_notification %>
-  <%= link_to noticed_notification.message, noticed_notification.url %> | <%= notification.created_at %>
+  <div class="flex gap-4">
+    <span>
+      <%= link_to noticed_notification.message, noticed_notification.url, class: "no-underline hover:underline text-blue-500" %>
+    </span>
+    <span>
+      <%= notification.created_at %>
+    </span>
+  </div>
 </div>

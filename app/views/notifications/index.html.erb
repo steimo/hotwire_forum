@@ -5,14 +5,14 @@
   <% end %>
 </div>
 <h3 class="text-2xl font-medium text-center mt-5">What's new?</h3>
-<div class="mt-4 p-8">
-<% if @notifications.any? %>
-  <%= render @notifications %>
-<% else %>
-  <div class="mb-3">No new notifications</div>
-<% end %>
-<% if @previous_notifications.any? %>
-  <h4>Previously Seen</h4>
-  <%= render(partial: "notification", collection: @previous_notifications) %>
-<% end %>
+<div class="flex flex-col gap-2 mt-4 p-8">
+  <% if @notifications.any? %>
+    <%= render @notifications %>
+  <% else %>
+    <div class="mb-3 text-l font-medium">No new notifications</div>
+  <% end %>
+  <% if @previous_notifications.any? %>
+    <h4 class="mt-6 text-xl border-b">Previously Seen</h4>
+    <%= render(partial: "notification", collection: @previous_notifications) %>
+  <% end %>
 </div>
