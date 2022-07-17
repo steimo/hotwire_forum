@@ -1,6 +1,5 @@
 @import "actiontext";
-
-
+@import "trix/dist/trix";
 
 body {
   font-family: -apple-system, sans-serif;
