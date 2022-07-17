@@ -11,7 +11,7 @@ class Discussion < ApplicationRecord
                                   where(discussion_subscriptions: { subscription_type: :optout })
                                 }, through: :discussion_subscriptions, source: :user
 
-  scope :pinned_first, -> { order(pinned: :desc, updated_at: :asc) }
+  scope :pinned_first, -> { order(pinned: :desc, updated_at: :desc) }
 
   delegate :name, prefix: :category, to: :category, allow_nil: true
 

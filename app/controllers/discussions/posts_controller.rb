@@ -42,7 +42,7 @@ module Discussions
       @post.destroy
 
       respond_to do |format|
-        format.turbo_stream {}
+        format.turbo_stream {} # let the callback to remove the post
         format.html { redirect_to @post.discussion, notice: 'Post deleted' }
       end
     end

@@ -1,10 +1,14 @@
 <div id="<%= dom_id category %>">
-  <div class="flex justify-around mt-5">
-    <%= link_to category.name, category_discussions_path(category), class: "text-blue-600" %>
-    <% if category.discussions_count&.positive? %>
-      <span class="px-2 bg-teal-400 rounded-3xl">
-        <%= category.discussions_count %>
-      </span>
-    <% end %>
+  <% if controller_name == "categories" %>
+    <div class="flex justify-start m-8 gap-2 text-xl border-b">
+    <% else %>
+      <div class="flex justify-between mt-5">
+      <% end %>
+      <%= link_to category.name, category_discussions_path(category), class: "no-underline hover:underline text-blue-500" %>
+      <% if category.discussions_count&.positive? %>
+        <span class="px-2 bg-teal-400 rounded-3xl">
+          <%= category.discussions_count %>
+        </span>
+      <% end %>
+    </div>
   </div>
-</div>
