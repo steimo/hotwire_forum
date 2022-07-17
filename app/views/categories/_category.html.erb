@@ -6,7 +6,7 @@
       <% end %>
       <%= link_to category.name, category_discussions_path(category), class: "no-underline hover:underline text-blue-500" %>
       <% if category.discussions_count&.positive? %>
-        <span class="px-2 bg-teal-400 rounded-3xl">
+        <span class="px-2 mr-2 mb-2 bg-teal-500 rounded-3xl text-white">
           <%= category.discussions_count %>
         </span>
       <% end %>

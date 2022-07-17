@@ -3,10 +3,11 @@
 
 body {
   font-family: -apple-system, sans-serif;
+  background: #eee;
 }
 
 #navbar {
-  background: #eee;
+  background: #253140;
 }
 
 /* turbo-frame { */
