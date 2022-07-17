@@ -28,7 +28,7 @@
       <%= form.label :category_id, "Choose a category", class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400" %>
       <%= form.collection_select :category_id, Category.sorted, :id, :name,
           {include_blank: "Pick a category..."},
-          {autofocus: false, class: "form-control"} %>
+          {autofocus: false, class: "form-control rounded-2xl"} %>
     </div>
     <div class="mb-3 m-4">
       <%= form.label :pinned, class: "form-check-label inline-block text-gray-800" %>
