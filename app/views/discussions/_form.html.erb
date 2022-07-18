@@ -40,7 +40,7 @@
     </div>
     <% if discussion.new_record? %>
       <%= form.fields_for :posts do |p| %>
-        <div class="mb-6 m-4">
+        <div class="mb-6 m-4" id="discussion_post_body_trix">
           <%= p.rich_text_area :body, placeholder: "Kickoff the discussion" %>
         </div>
       <% end %>

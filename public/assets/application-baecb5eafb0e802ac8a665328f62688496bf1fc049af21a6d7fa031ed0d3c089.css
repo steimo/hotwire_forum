@@ -48,3 +48,14 @@ body {
 trix-toolbar .trix-button-row {
   flex-wrap: wrap;
 }
+
+
+#post_body, #discussion_post_body_trix {
+  width: auto;
+  max-width: 50vw;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  resize: none;
+}
+
+

@@ -1,4 +1,4 @@
-<%= turbo_frame_tag "#{dom_id(post)}_form", target: "_top", class: "" do %>
+<%= turbo_frame_tag "#{dom_id(post)}_form", target: "_top" do %>
   <% if post.discussion.closed? && post.new_record? %>
     <div role="alert" class="font-semibold text-l text-red-400 text-center p-2">
       This discussion is currently locked and new posts cannot be posted.
@@ -15,7 +15,7 @@
           </ul>
         </div>
       <% end %>
-      <div class="mb-3">
+      <div class="mb-3" id="trix-overflow">
         <%= form.label :body, class: "form-label hidden" %>
         <%= form.rich_text_area :body, placeholder: "Add your comment", autofocus: true %>
       </div>
