@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import "~tailwindcss/base"; */
 
 /*
 
@@ -83,3 +84,4 @@
     @apply text-gray-400 cursor-default;
   }
 }
+@import 'actiontext.css';
