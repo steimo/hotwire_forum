@@ -1,6 +1,6 @@
 <%= turbo_frame_tag "#{dom_id(post)}_form", target: "_top", class: "" do %>
   <% if post.discussion.closed? && post.new_record? %>
-    <div role="alert" class="font-semibold text-l text-red-400">
+    <div role="alert" class="font-semibold text-l text-red-400 text-center p-2">
       This discussion is currently locked and new posts cannot be posted.
     </div>
   <% else %>
