@@ -1,4 +1,8 @@
-@import "actiontext";
+/* @import "actiontext"; */
+/*
+*= require actiontext
+*= require trix
+*/
 
 body {
   font-family: -apple-system, sans-serif;
