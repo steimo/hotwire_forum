@@ -49,8 +49,8 @@ trix-toolbar .trix-button-row {
   flex-wrap: wrap;
 }
 
-
-#post_body, #discussion_post_body_trix {
+#post_body,
+#discussion_post_body_trix {
   width: auto;
   max-width: 50vw;
   overflow-wrap: break-word;
@@ -58,4 +58,13 @@ trix-toolbar .trix-button-row {
   resize: none;
 }
 
-
+@media only screen and (max-width: 1025px) {
+  #post_body,
+  #discussion_post_body_trix {
+    width: auto;
+    max-width: 100vw;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    resize: none;
+  }
+}
