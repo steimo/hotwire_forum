@@ -1,9 +1,9 @@
 <h1 style="margin-top: 0px;">Hotwire Forum</h1>
 
 <p>
-This is an implementation of online discussion site where people can hold conversations in the form of posted messages. Project development is heavily dependent on [Hotwire](https://hotwired.dev/) - default frontend framework for Rails 7. 
+This is an implementation of online discussion site where people can hold conversations in the form of posted messages. Project development is heavily dependent on <a href="https://hotwired.dev/">Hotwire</a> - default frontend framework for Rails 7. 
 </p>
-<div align="center">
+<div align="start">
 <img src="screenshots/presentation.png" width="40%"></img> 
 </div>
 
