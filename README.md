@@ -27,9 +27,6 @@ The reason to use Hotwire in this project is to support an application where mos
 
 You can try it out [here](https://secure-retreat-04532.herokuapp.com/).
 
-### Contact me:
-
-vladyslav.kolomiets@protonmail.com
 
 ### Contributing:
 
