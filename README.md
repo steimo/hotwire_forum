@@ -23,11 +23,6 @@ The reason to use Hotwire in this project is to support an application where mos
 
 - notifications
 
-### Demo:
-
-You can try it out [here](https://secure-retreat-04532.herokuapp.com/).
-
-
 ### Contributing:
 
 Pull requests are welcome.
